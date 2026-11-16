@@ -204,7 +204,7 @@ footer{padding:18px 22px calc(18px + env(safe-area-inset-bottom,0px));font-size:
 <section id="work">
 <p class="lab">002 Selected work</p>
 <h2>The credits.</h2>
-<p class="sub">Children’s television for beIN Media Group, airline and medical campaigns, music videos and brand voices. Pick a format.</p>
+<p class="sub">Children’s television for beIN Media Group, airline and medical campaigns, music videos, documentarys, short films & brand voices. Pick a format.</p>
 <div id="wf2"><button class="ch" data-f="all" aria-pressed="true">ALL</button><button class="ch" data-f="tv" aria-pressed="false">TV SERIES</button><button class="ch" data-f="ad" aria-pressed="false">ADS / SCREENPLAY</button><button class="ch" data-f="so" aria-pressed="false">SOCIAL &amp; BRANDS</button></div>
 <ul id="wk"></ul>
 </section>
@@ -503,8 +503,7 @@ const WK=[
 ['ad','Ray-Ban Activation','Concept creator','https://drive.google.com/file/d/190iPY-jkRrs2yGq8UjZMnhH-aJixLNb1/view?usp=sharing'],
 ['so','EURECA — AUC 2021','Social media · Press release · Copywriter','https://drive.google.com/drive/folders/14hBh00h7Fg7hkdmZupTupnVE-8I0HM7n?usp=drive_link'],
 ['so','Yousra Wahba Art','Brand creation &amp; development · Content strategy: crafting the brand character and tone of voice','https://www.instagram.com/_yousra_w/?hl=en'],
-['so','Ma’alem','Social media campaign · Copywriter','https://drive.google.com/file/d/1eR98Gc6lzhNIJ_mw3CyOJbQepxSY7YP0/view?usp=sharing'],
-['so','Coach Ramy — The Godfather of Egyptian CrossFit','Promotional videos · Concept creator / copywriter','https://www.instagram.com/p/CTXYvp5rRi5/?igsh=MW5meGI4NHZoZzh3Zw==']];
+['so','Ma’alem','Social media campaign · Copywriter','https://drive.google.com/file/d/1eR98Gc6lzhNIJ_mw3CyOJbQepxSY7YP0/view?usp=sharing']];
 function wkr(f){$('#wk').innerHTML=WK.filter(w=>f=='all'||w[0]==f).map((w,i)=>`<li><a href="${w[3]}" target="_blank" rel="noopener noreferrer"><small>${String(i+1).padStart(2,'0')}</small><div><h3>${w[1]}</h3><em>${w[2]}</em></div><span class="go">VIEW ›</span></a></li>`).join('');
  document.querySelectorAll('#wf2 .ch').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f==f))}
 $('#wf2').onclick=e=>{if(e.target.dataset.f)wkr(e.target.dataset.f)};wkr('all');
